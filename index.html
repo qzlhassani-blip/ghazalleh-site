@@ -335,6 +335,15 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
 }
 .tools li.fa{font-family:"Vazirmatn",sans-serif;font-size:.8125rem}
 
+
+/* ردیف مشخصات هر پروژه — مقیاس و ابزار، بدون مکانیزم */
+.spec{grid-column:2;display:flex;flex-wrap:wrap;gap:.35rem .4rem;margin:.9rem 0 0;padding:0;list-style:none;max-width:48ch}
+.spec li{
+  font-family:"IBM Plex Mono",monospace;font-size:.6875rem;line-height:1.7;
+  color:var(--ink-faint);border:1px solid var(--rule);border-radius:2px;padding:.1rem .45rem;
+}
+.spec li.when{color:var(--gold);border-color:var(--gold-soft)}
+
 /* راز کوچک */
 .secret{margin-block-start:2.5rem;max-width:44rem}
 .secret button{
@@ -436,6 +445,7 @@ footer{border-block-start:1px solid var(--rule);background:var(--ground-2)}
   .facts{gap:0 1.25rem}
   .moment{grid-template-columns:minmax(0,1fr);gap:.1rem}
   .gift{grid-template-columns:minmax(0,1fr);gap:.2rem}
+  .spec{grid-column:1}
   .dawn hr{display:none}
   .dawn-mark{max-width:none}
 }
@@ -507,9 +517,9 @@ footer{border-block-start:1px solid var(--rule);background:var(--ground-2)}
           </ul>
 
           <div class="metrics">
-            <div><b>۴</b><span>سیستمی که ساختم و هیچ‌کدام را از قبل بلد نبودم</span></div>
-            <div><b>۶</b><span>نقش پیش از این، در سه صنعت مختلف</span></div>
-            <div><b>۳</b><span>ماه، از میز منابع انسانی تا ساختن محصول</span></div>
+            <div><b>۳</b><span>محصول که هر روز در استودیو استفاده می‌شوند</span></div>
+            <div><b>۴۶٬۰۰۰</b><span>خط کد در چهار مخزن، به‌عنوان نویسندهٔ اصلی</span></div>
+            <div><b>۳۶۳</b><span>تست واحد، فقط روی دستیار پشتیبانی</span></div>
           </div>
         </div>
       </header>
@@ -681,18 +691,57 @@ footer{border-block-start:1px solid var(--rule);background:var(--ground-2)}
             <div class="gift">
               <h3>دستیار پشتیبانی <span dir="ltr">(RAG)</span></h3>
               <p>جواب کاربر را از پایگاه دانش محصول می‌دهد و هرجا لازم شد به آدم واقعی می‌سپاردش. به هیچ پلتفرم چتی گره نخورده.</p>
+              <ul class="spec">
+              <li class="when">مرداد — مهر ۱۴۰۵</li>
+              <li>۶ بازی</li>
+              <li>۳۶۳ تست</li>
+              <li>۴۵ اندپوینت</li>
+              <li>پنل سه‌زبانه</li>
+              <li>Python</li>
+              <li>FastAPI</li>
+              <li>Qdrant</li>
+              <li>Redis</li>
+              <li>Kubernetes</li>
+              </ul>
             </div>
             <div class="gift">
               <h3>تحلیل نظرات کافه‌بازار</h3>
               <p>نظرهای کاربران ما و رقبا را از کافه‌بازار تحلیل می‌کند. خروجی روی میز مدیر استودیو می‌رود، پس باید قابل تصمیم‌گیری باشد — نه یک گزارش طولانی.</p>
+              <ul class="spec">
+              <li class="when">شهریور ۱۴۰۵</li>
+              <li>کافه‌بازار</li>
+              <li>گوگل‌پلی</li>
+              <li>مایکت</li>
+              <li>۲۳ هزار خط</li>
+              <li>تقویم جلالی</li>
+              <li>Next.js</li>
+              <li>TypeScript</li>
+              <li>n8n</li>
+              </ul>
             </div>
             <div class="gift">
               <h3>شکارچی استودیو</h3>
               <p>استودیوهای بازی‌سازی را پیدا می‌کند و اولین ایمیل را می‌فرستد. ساعت‌ها جست‌وجوی دستی، حالا خودکار.</p>
+              <ul class="spec">
+              <li class="when">تیر — شهریور ۱۴۰۵</li>
+              <li>نسخهٔ v2.1.3</li>
+              <li>۷ مجموعه تست</li>
+              <li>تأیید انسانی پیش از هر ایمیل</li>
+              <li>Django</li>
+              <li>PostgreSQL</li>
+              <li>Telegram</li>
+              <li>SMTP/IMAP</li>
+              </ul>
             </div>
             <div class="gift">
               <h3>سیستم مدیریت کافه</h3>
               <p>سفارش مشتری، نمایشگر آشپزخانه، پنل مدیریت، و انباری که بهای تمام‌شدهٔ هر سفارش را حساب می‌کند.</p>
+              <ul class="spec">
+              <li>پروژهٔ شخصی</li>
+              <li>Next.js</li>
+              <li>Prisma</li>
+              <li>SQLite</li>
+              </ul>
             </div>
           </div>
 
