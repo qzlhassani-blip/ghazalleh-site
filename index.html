@@ -3,9 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="غزاله حسنی — ساخت محصولات هوش مصنوعی در استودیوی بازی مدریک.">
+<meta name="description" content="غزاله حسنی؛ سازندهٔ محصولات هوش مصنوعی در استودیوی بازی مدریک. دستیار پشتیبانی‌ای که حدود ۹۰٪ پاسخ‌گویی را خودش انجام می‌دهد و رباتی که کار یک نیروی تمام‌وقت را می‌کند.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="غزاله حسنی — از منابع انسانی تا ساختن با هوش مصنوعی">
+<meta property="og:description" content="غزاله حسنی؛ سازندهٔ محصولات هوش مصنوعی در استودیوی بازی مدریک. دستیار پشتیبانی‌ای که حدود ۹۰٪ پاسخ‌گویی را خودش انجام می‌دهد و رباتی که کار یک نیروی تمام‌وقت را می‌کند.">
+<meta property="og:url" content="https://qzlhassani-blip.github.io/ghazalleh-site/">
+<meta property="og:image" content="https://qzlhassani-blip.github.io/ghazalleh-site/og-fa.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fa_IR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://qzlhassani-blip.github.io/ghazalleh-site/">
 <style>html{color-scheme:light dark}body{margin:0;font:14px system-ui}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>هزار و یک شب غزاله</title>
+<title>غزاله حسنی — از منابع انسانی تا ساختن با هوش مصنوعی</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Aref+Ruqaa+Ink:wght@400;700&family=Shippori+Mincho:wght@400;500&family=Scheherazade+New:wght@400;500;600;700&family=Vazirmatn:wght@200;300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -140,7 +150,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
   transition:border-color .18s ease,color .18s ease;
 }
 .topbar .rsm:hover{border-color:var(--gold);color:var(--ink)}
-@media (max-width:760px){.topbar .rsm{display:none}}
+@media (max-width:760px){.topbar .rsm{padding:.4rem .55rem}}
+@media (max-width:420px){.topbar .brand{font-size:1.1rem}.topbar .in{gap:.45rem}}
 .topbar .cta{
   font-size:.8125rem;color:var(--ground);background:var(--ink);
   border-radius:2px;padding:.4rem .85rem;white-space:nowrap;transition:background .18s ease;
@@ -239,7 +250,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
 .vine .leaf{fill:var(--ink-soft);opacity:.5}
 
 /* سِنسو — بادبزن تاشوی ژاپنی، نشانِ میان دو شب */
-.fan{display:block;width:4.25rem;height:auto}
+.fan{display:block;width:5.25rem;height:auto}
 .fan .paper{fill:var(--shade);stroke:var(--ink-soft);stroke-width:1.2;stroke-linejoin:round;opacity:.6}
 .fan .rib{fill:none;stroke:var(--ink-soft);stroke-linecap:round;opacity:.55}
 .fan .r1{stroke-width:1.9}
@@ -248,12 +259,6 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
 .fan .pin{fill:var(--seal)}
 
 /* برچسب عمودی ژاپنی کنار هر شب */
-.ja{
-  writing-mode:vertical-rl;text-orientation:upright;
-  font-family:"Shippori Mincho",serif;font-weight:400;
-  font-size:.8125rem;line-height:1.5;letter-spacing:.14em;
-  color:var(--ink-faint);opacity:.6;margin-block-start:.9rem;
-}
 
 /* ===================== شب‌ها ===================== */
 .night{
@@ -440,7 +445,7 @@ footer{border-block-start:1px solid var(--rule);background:var(--ground-2)}
   .lantern{order:-1;max-width:5.5rem}
   .marker{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;padding-block-start:0}
   .marker .moon{margin-block-end:0}
-  .ja{writing-mode:horizontal-tb;margin-block-start:0}
+  .ja{margin-block-start:0}
   .marker b::after{content:" ·";color:var(--ink-faint)}
   .nights a{grid-template-columns:auto minmax(0,1fr)}
   .nights .m{grid-column:2;margin-block-start:-.35rem}
@@ -456,9 +461,43 @@ footer{border-block-start:1px solid var(--rule);background:var(--ground-2)}
   .dawn hr{display:none}
   .dawn-mark{max-width:none}
 }
+
+/* ===================== پیوند دو فرهنگ =====================
+   مهر (ایرانی) و هانکو (ژاپنی) یک کارند: امضای سرخ پای کار.
+   پس هر شب یک مهر عمودی دارد، قاب عکس یک مهر کوچک، و پاصفحه مهر اصلی.
+   موج روی بادبزن‌ها «سیگایها»ست که ریشه‌اش را به ایران ساسانی می‌رسانند.
+   بامبوی حاشیه همراه ماه رشد می‌کند: هلال، نیمه، بدر. */
+.marker .ja{
+  display:inline-block;width:max-content;
+  writing-mode:vertical-rl;text-orientation:upright;
+  font-family:"Shippori Mincho",serif;font-weight:500;
+  font-size:.75rem;line-height:1;letter-spacing:.12em;
+  color:var(--seal);opacity:.9;
+  border:1.5px solid var(--seal);border-radius:3px;
+  padding:.5rem .32rem .38rem;margin-block-start:1rem;
+  transform:rotate(-4deg);
+  box-shadow:inset 0 0 0 2px var(--ground),inset 0 0 0 2.6px var(--seal);
+}
+.lantern .stamp rect{fill:var(--seal)}
+.lantern .stamp text{fill:var(--ground-2);font-family:var(--calli),"Scheherazade New",serif;font-size:11px;font-weight:700}
+.fan .waves{opacity:.9}
+.sgh circle{fill:var(--ground);stroke:var(--gold-soft);stroke-width:.55}
+.colophon{max-width:46ch;font-size:.75rem;line-height:1.9;color:var(--ink-faint);margin-block-start:.6rem}
+.colophon b{color:var(--seal);font-weight:500}
 </style>
 
 <div class="page" dir="rtl" lang="fa">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <pattern id="seigaiha" class="sgh" width="16" height="8" patternUnits="userSpaceOnUse">
+        <g><circle cx="0" cy="0" r="8"></circle><circle cx="0" cy="0" r="5.4"></circle><circle cx="0" cy="0" r="2.8"></circle></g>
+        <g><circle cx="16" cy="0" r="8"></circle><circle cx="16" cy="0" r="5.4"></circle><circle cx="16" cy="0" r="2.8"></circle></g>
+        <g><circle cx="8" cy="4" r="8"></circle><circle cx="8" cy="4" r="5.4"></circle><circle cx="8" cy="4" r="2.8"></circle></g>
+        <g><circle cx="0" cy="8" r="8"></circle><circle cx="0" cy="8" r="5.4"></circle><circle cx="0" cy="8" r="2.8"></circle></g>
+        <g><circle cx="16" cy="8" r="8"></circle><circle cx="16" cy="8" r="5.4"></circle><circle cx="16" cy="8" r="2.8"></circle></g>
+      </pattern>
+    </defs>
+  </svg>
 
   <header class="topbar">
     <div class="in">
@@ -508,6 +547,10 @@ footer{border-block-start:1px solid var(--rule);background:var(--ground-2)}
               <path class="enso e3" d="M6.5 67 C7.5 47 21 28.5 38 18
                                        C52 10 68 7.5 82 11"></path>
             </g>
+            <g class="stamp" transform="rotate(-6 119 114)">
+              <rect x="111" y="106" width="16" height="16" rx="1.5"></rect>
+              <text x="119" y="115" text-anchor="middle" dominant-baseline="middle">غ</text>
+            </g>
           </svg>
         </div>
 
@@ -516,7 +559,7 @@ footer{border-block-start:1px solid var(--rule);background:var(--ground-2)}
           <h1>غزاله حسنی</h1>
           <p class="role">از منابع انسانی تا ساختن با هوش مصنوعی</p>
 
-          <p class="lede">شهرزاد هر شب یک قصهٔ تازه بلد می‌شد. من هر پروژه یک چیز تازه.</p>
+          <p class="lede">شهرزاد هر شب قصهٔ تازه‌ای می‌گفت؛ من با هر پروژه چیز تازه‌ای یاد می‌گیرم.</p>
 
           <ul class="nights">
             <li><a href="#night-1"><span class="n">شب اول</span><span class="t">از کجا آمده‌ام</span><span class="m">شش نقش، و یک خط مشترک میانشان</span></a></li>
@@ -526,8 +569,8 @@ footer{border-block-start:1px solid var(--rule);background:var(--ground-2)}
 
           <div class="metrics">
             <div><b>۳</b><span>محصول که هر روز در استودیو استفاده می‌شوند</span></div>
-            <div><b>۴۶٬۰۰۰</b><span>خط کد در چهار مخزن، به‌عنوان نویسندهٔ اصلی</span></div>
-            <div><b>۳۶۳</b><span>تست واحد، فقط روی دستیار پشتیبانی</span></div>
+            <div><b>۹۰٪</b><span>از پاسخ‌گویی پشتیبانی را دستیار هوش مصنوعی خودش انجام می‌دهد</span></div>
+            <div><b>۱ نفر</b><span>کار تمام‌وقتی که شکارچی استودیو به‌تنهایی انجام می‌دهد</span></div>
           </div>
         </div>
       </header>
@@ -544,7 +587,7 @@ footer{border-block-start:1px solid var(--rule);background:var(--ground-2)}
             <path class="lit" d="M12 1.8 C7 2.4 3.1 6.5 2.3 11.4 C1.5 16.3 5.1 21.1 10.5 22.1 C6.4 18.6 4.9 14.4 5.4 10.5 C5.8 6.7 8.2 3.6 12 1.8 Z"></path>
           </svg>
           <b>شب اول</b><span>هلال</span><span class="ja" aria-hidden="true">第一夜</span>
-          <svg class="vine" viewBox="0 0 60 210" aria-hidden="true">
+          <svg class="vine" viewBox="0 120 60 90" aria-hidden="true">
             <path class="stem thin" d="M41 3 C39 48 43 98 40 148 C38.5 178 41 194 40 207"></path>
             <path class="stem" d="M41.5 86 C43 100 40.4 128 40 148 C38.5 178 41 194 40 207"></path>
             <g class="node">
@@ -571,7 +614,7 @@ footer{border-block-start:1px solid var(--rule);background:var(--ground-2)}
 
           <figure class="skymap">
             <div class="plate">
-              <svg viewBox="0 0 780 250" role="img" aria-label="صورت فلکی مسیر شغلی: نه ستاره که با خطی به هم وصل شده‌اند و ستارهٔ آخر پرنورتر است">
+              <svg viewBox="0 0 780 250" role="img" aria-label="صورت فلکی مسیر شغلی: نُه ستاره که با خطی به هم وصل شده‌اند و ستارهٔ آخر پرنورتر است">
                 <g class="dust">
                   <circle cx="706" cy="22" r="1.5"></circle>
                   <circle cx="760" cy="188" r="1.5"></circle>
@@ -624,7 +667,7 @@ footer{border-block-start:1px solid var(--rule);background:var(--ground-2)}
           </g>
               </svg>
             </div>
-            <figcaption><b>صورت فلکیِ غزاله</b> — نه ستاره، یک جهت. ستارهٔ پرنور، امروز است.</figcaption>
+            <figcaption><b>صورت فلکیِ غزاله</b> — نُه ستاره، یک جهت. ستارهٔ پرنور، امروز است.</figcaption>
           </figure>
 
           <div class="moments">
@@ -646,6 +689,8 @@ footer{border-block-start:1px solid var(--rule);background:var(--ground-2)}
         <div class="dawn-mark">
           <svg class="fan" viewBox="0 0 160 136" role="img" aria-label="بادبزن تاشو">
             <path class="paper" d="M103.6 101 A26 26 0 0 0 56.4 101 L16.6 82.4 A70 70 0 0 1 143.4 82.4 Z"></path>
+            <path class="waves" fill="url(#seigaiha)" d="M103.6 101 A26 26 0 0 0 56.4 101 L16.6 82.4 A70 70 0 0 1 143.4 82.4 Z"></path>
+            <path class="paper" fill="none" style="fill:none" d="M103.6 101 A26 26 0 0 0 56.4 101 L16.6 82.4 A70 70 0 0 1 143.4 82.4 Z"></path>
             <g class="rib">
               <path class="r3" d="M80 112 L152.5 78.2"></path>
               <path class="r3" d="M80 112 L134.9 53.8"></path>
@@ -670,7 +715,7 @@ footer{border-block-start:1px solid var(--rule);background:var(--ground-2)}
             <path class="lit" d="M12 1.8 C7 2.4 3.1 6.5 2.3 11.4 C1.5 16.3 5.1 21.1 10.5 22.1 C11.2 22.2 11.9 22.2 12.5 22.1 C13.6 17 12.7 12 12.9 7 C13 5.2 12.7 3.5 12 1.8 Z"></path>
           </svg>
           <b>شب دوم</b><span>نیمه</span><span class="ja" aria-hidden="true">第二夜</span>
-          <svg class="vine" viewBox="0 0 60 210" aria-hidden="true">
+          <svg class="vine" viewBox="0 66 60 144" aria-hidden="true">
             <path class="stem thin" d="M41 3 C39 48 43 98 40 148 C38.5 178 41 194 40 207"></path>
             <path class="stem" d="M41.5 86 C43 100 40.4 128 40 148 C38.5 178 41 194 40 207"></path>
             <g class="node">
@@ -691,16 +736,17 @@ footer{border-block-start:1px solid var(--rule);background:var(--ground-2)}
         </div>
         <div>
           <h2>چهار سیستمی که هیچ‌کدامشان را بلد نبودم</h2>
-          <p>هر چهارتا را با هوش مصنوعی ساختم — نه با کپی‌کردن خروجی، بلکه با یاد گرفتن هر تکه.</p>
+          <p>هر چهارتا را با کمک هوش مصنوعی ساختم؛ اما تعریف مسئله، معماری و تصمیم‌ها با خودم بود — و هر تکه را در راه یاد گرفتم.</p>
 
 
 
           <div class="gifts">
             <div class="gift">
               <h3>دستیار پشتیبانی <span dir="ltr">(RAG)</span></h3>
-              <p>جواب کاربر را از پایگاه دانش محصول می‌دهد و هرجا لازم شد به آدم واقعی می‌سپاردش. به هیچ پلتفرم چتی گره نخورده.</p>
+              <p>جواب بازیکن را از پایگاه دانش هر بازی می‌دهد و هرجا لازم شد به آدم واقعی می‌سپاردش. امروز <strong>حدود ۹۰٪ پاسخ‌گویی را خودش انجام می‌دهد</strong> و گام بعدی، همهٔ آن است.</p>
               <ul class="spec">
               <li class="when">مرداد — مهر ۱۴۰۵</li>
+              <li>۹۰٪ پاسخ خودکار</li>
               <li>۶ بازی</li>
               <li>۳۶۳ تست</li>
               <li>۴۵ اندپوینت</li>
@@ -713,8 +759,8 @@ footer{border-block-start:1px solid var(--rule);background:var(--ground-2)}
               </ul>
             </div>
             <div class="gift">
-              <h3>تحلیل نظرات کافه‌بازار</h3>
-              <p>نظرهای کاربران ما و رقبا را از کافه‌بازار تحلیل می‌کند. خروجی روی میز مدیر استودیو می‌رود، پس باید قابل تصمیم‌گیری باشد — نه یک گزارش طولانی.</p>
+              <h3>تحلیل نظرات و بازار</h3>
+              <p>نظرهای کاربران ما و رقبا را از کافه‌بازار، گوگل‌پلی و مایکت جمع و تحلیل می‌کند. خروجی روی میز مدیر استودیو می‌رود، پس باید قابل تصمیم‌گیری باشد — نه یک گزارش طولانی.</p>
               <ul class="spec">
               <li class="when">شهریور ۱۴۰۵</li>
               <li>کافه‌بازار</li>
@@ -729,9 +775,10 @@ footer{border-block-start:1px solid var(--rule);background:var(--ground-2)}
             </div>
             <div class="gift">
               <h3>شکارچی استودیو</h3>
-              <p>استودیوهای بازی‌سازی را پیدا می‌کند و اولین ایمیل را می‌فرستد. ساعت‌ها جست‌وجوی دستی، حالا خودکار.</p>
+              <p>استودیوهای بازی‌سازی را پیدا می‌کند، امتیازشان می‌دهد و اولین ایمیل همکاری را می‌فرستد. <strong>کار یک نیروی تمام‌وقت را انجام می‌دهد</strong>؛ اما هیچ ایمیلی بدون تأیید انسان نمی‌رود.</p>
               <ul class="spec">
               <li class="when">تیر — شهریور ۱۴۰۵</li>
+              <li>کار یک نیروی تمام‌وقت</li>
               <li>نسخهٔ v2.1.3</li>
               <li>۷ مجموعه تست</li>
               <li>تأیید انسانی پیش از هر ایمیل</li>
@@ -756,7 +803,7 @@ footer{border-block-start:1px solid var(--rule);background:var(--ground-2)}
           <div class="tools">
             <span class="k">ساخت</span>
             <ul>
-              <li>Next.js</li><li>Prisma</li><li>FastAPI</li><li>PostgreSQL</li>
+              <li>Python</li><li>FastAPI</li><li>Django</li><li>Next.js</li><li>Prisma</li><li>PostgreSQL</li>
               <li>Qdrant</li><li>Redis</li><li>Langfuse</li><li>Docker</li>
               <li class="fa">معماری RAG</li><li>Figma</li><li>Canva</li>
             </ul>
@@ -790,6 +837,8 @@ footer{border-block-start:1px solid var(--rule);background:var(--ground-2)}
         <div class="dawn-mark">
           <svg class="fan" viewBox="0 0 160 136" role="img" aria-label="بادبزن تاشو">
             <path class="paper" d="M103.6 101 A26 26 0 0 0 56.4 101 L16.6 82.4 A70 70 0 0 1 143.4 82.4 Z"></path>
+            <path class="waves" fill="url(#seigaiha)" d="M103.6 101 A26 26 0 0 0 56.4 101 L16.6 82.4 A70 70 0 0 1 143.4 82.4 Z"></path>
+            <path class="paper" fill="none" style="fill:none" d="M103.6 101 A26 26 0 0 0 56.4 101 L16.6 82.4 A70 70 0 0 1 143.4 82.4 Z"></path>
             <g class="rib">
               <path class="r3" d="M80 112 L152.5 78.2"></path>
               <path class="r3" d="M80 112 L134.9 53.8"></path>
@@ -859,6 +908,7 @@ footer{border-block-start:1px solid var(--rule);background:var(--ground-2)}
       </svg>
       <span class="sig">غزاله حسنی — قصه‌گو</span>
       <span>مهر ۱۴۰۵ · ساخته‌شده برای کسانی که تا آخر می‌خوانند</span>
+      <p class="colophon">و برای همین‌ها: موج‌های روی بادبزن‌ها <b>سیگایها</b>ست؛ نقشی ژاپنی که می‌گویند از ایرانِ ساسانی، از راه ابریشم، به ژاپن رسید. مهرِ سرخ هم در هر دو سنت امضای پای کار است. این سایت همان راه را رفته: قصه از شهرزاد، قاب از ژاپن.</p>
     </div>
   </footer>
 </div>
