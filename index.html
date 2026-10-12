@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl" translate="no">
 <head>
 <meta charset="utf-8">
+<meta name="google" content="notranslate">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="غزاله حسنی؛ سازندهٔ محصولات هوش مصنوعی در استودیوی بازی مدریک. دستیار پشتیبانی‌ای که حدود ۹۰٪ پاسخ‌گویی را خودش انجام می‌دهد و رباتی که کار یک نیروی تمام‌وقت را می‌کند.">
 <meta property="og:type" content="website">
@@ -489,6 +490,20 @@ footer{border-block-start:1px solid var(--rule);background:var(--ground-2)}
 .lantern .real{opacity:0;transition:opacity .6s ease}
 .lantern:hover .real,.lantern.show .real{opacity:1}
 .lantern svg{cursor:pointer}
+
+/* نوار «نسخهٔ انگلیسی» — فقط برای مرورگرهایی که فارسی نیستند */
+.en-hint{
+  direction:ltr;display:flex;align-items:center;justify-content:center;gap:.9rem;
+  padding:.45rem var(--pad);background:var(--ground-2);border-block-end:1px solid var(--rule);
+  font-family:"Vazirmatn",system-ui,sans-serif;font-size:.875rem;line-height:1.6;color:var(--ink-soft);
+}
+.en-hint a{color:var(--seal);font-weight:500;border-block-end:1px solid currentColor}
+.en-hint button{
+  font:inherit;font-size:1.1rem;line-height:1;color:var(--ink-faint);
+  background:none;border:0;padding:.1rem .35rem;cursor:pointer;
+}
+.en-hint button:hover{color:var(--ink)}
+@media (max-width:480px){.en-hint span{display:none}}
 </style>
 
 <div class="page" dir="rtl" lang="fa">
@@ -503,6 +518,12 @@ footer{border-block-start:1px solid var(--rule);background:var(--ground-2)}
       </pattern>
     </defs>
   </svg>
+
+  <div class="en-hint" id="en-hint" lang="en" hidden>
+    <span>This page is in Persian.</span>
+    <a href="en.html">Read the site in English →</a>
+    <button type="button" id="en-hint-close" aria-label="Close">×</button>
+  </div>
 
   <header class="topbar">
     <div class="in">
@@ -924,6 +945,20 @@ footer{border-block-start:1px solid var(--rule);background:var(--ground-2)}
 
 <script>
 (function(){
+  /* ---- نوار نسخهٔ انگلیسی: اگر هیچ‌کدام از زبان‌های مرورگر فارسی نباشد ---- */
+  var hint = document.getElementById('en-hint');
+  if(hint){
+    var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
+    var persian = Array.prototype.some.call(langs, function(l){ return /^fa(-|$)/i.test(l); });
+    var closed = false;
+    try { closed = sessionStorage.getItem('en-hint-closed') === '1'; } catch(e){}
+    if(!persian && !closed) hint.hidden = false;
+    document.getElementById('en-hint-close').addEventListener('click', function(){
+      hint.hidden = true;
+      try { sessionStorage.setItem('en-hint-closed', '1'); } catch(e){}
+    });
+  }
+
   /* ---- نشانِ همراه: بعد از سربرگ پایین می‌آید، سر پاصفحه محو می‌شود ---- */
   var mark = document.querySelector('.lantern svg');
   var hero = document.querySelector('.hero');
